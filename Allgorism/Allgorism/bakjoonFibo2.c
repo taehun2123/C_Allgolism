@@ -9,6 +9,7 @@ void printFibo(int n) {
 
 int main() {
 	int n;
+	
 	scanf("%d", &n);
 
 	printFibo(n);
