@@ -9,7 +9,7 @@ void printFibo(int n) {
 
 int main() {
 	int n;
-	scanf_s("%d", &n);
+	scanf("%d", &n);
 
 	printFibo(n);
 }

@@ -1,0 +1,5 @@
+/Users/mac/Desktop/coding/C/Allgorism-Mac/Allgolism/Allgolism/obj/Debug/net7.0/Allgolism.csproj.AssemblyReference.cache
+/Users/mac/Desktop/coding/C/Allgorism-Mac/Allgolism/Allgolism/obj/Debug/net7.0/Allgolism.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/Desktop/coding/C/Allgorism-Mac/Allgolism/Allgolism/obj/Debug/net7.0/Allgolism.AssemblyInfoInputs.cache
+/Users/mac/Desktop/coding/C/Allgorism-Mac/Allgolism/Allgolism/obj/Debug/net7.0/Allgolism.AssemblyInfo.cs
+/Users/mac/Desktop/coding/C/Allgorism-Mac/Allgolism/Allgolism/obj/Debug/net7.0/Allgolism.csproj.CoreCompileInputs.cache

@@ -10,7 +10,7 @@ void printReclusive(int n) {
 int main(){
 	int n;
 
-	scanf_s("%d", &n);
+	scanf("%d", &n);
 
 	printReclusive(n);
 }
