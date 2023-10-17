@@ -8,8 +8,8 @@ int main() {
 
 	char strng[30] = "C language is easy";
 
-	printf("¹®ÀÚ¿­\"%s\"\n", strng);
-	strcpy(strng, "World"); //strngÀ» "World"¶ó´Â ¹®ÀÚ¿­·Î ¹Ù²ã¶ó
-	printf("¹®ÀÚ¿­\"%s\"\n", strng);
+	printf("ë³µì‚¬ ì „ ë¬¸ì\"%s\"\n", strng);
+	strcpy(strng, "World"); //strng ë³€ìˆ˜ì— "World" ë¬¸ìì—´ì´ ë³µì‚¬ë¨.
+	printf("ë³µì‚¬ ëœ ë¬¸ì\"%s\"\n", strng); //World ì¶œë ¥
 	printf("\n");
 }
