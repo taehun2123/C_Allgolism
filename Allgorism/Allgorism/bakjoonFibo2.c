@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 void printFibo(int n) {
-	if (n > 0) {
-		printf("%d ", n);
+	if (n != 1) { //거꾸로 출력
 		printFibo(n - 1);
 	}
+		printf("%d ", n);
 }
 
 int main() {
