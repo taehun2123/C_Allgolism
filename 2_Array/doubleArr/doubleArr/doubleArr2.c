@@ -1,12 +1,12 @@
 #include <stdio.h>
 #define ROWS 3
 #define COLS 5
-void interfaceScore(int studentScore[ROWS][COLS]) { //¸Ş¼Òµå ºĞ¸®
-	double sum[ROWS] = { 0 };
+void interfaceScore(int studentScore[ROWS][COLS]) {
+	double sum[ROWS] = { 0 }; //në²ˆ í•™ìƒì˜ ìµœì¢… ì„±ì ì˜ í•©ê³„ê°€ ì €ì¥ë˜ëŠ” ë°°ì—¹
 
 	for (int i = 0; i < ROWS; i++) {
 		sum[i] = studentScore[i][0] * 0.3 + studentScore[i][1] * 0.4 + studentScore[i][2] * 0.2 + studentScore[i][3] * 0.1 - studentScore[i][4];
-		printf("ÇĞ»ı %dÀÇ ÃÖÁ¾ ¼ºÀûÀº : %10.2f\n", i + 1, sum[i]); // %10.2f => ¼Ò¼öÁ¡À» ±âÁØÀ¸·Î ¾Õ µÚ, 2Ä­¾¿ Ãâ·Â
+		printf("í•™ìƒ %dë²ˆì˜ ìµœì¢… ì„±ì ì€ : %.2f ì…ë‹ˆë‹¤.\n", i + 1, sum[i]); // %.2fì€ ì†Œìˆ˜ì  ì•„ë˜ ë‘˜ì§¸ìë¦¬ê¹Œì§€ ì¶œë ¥í•˜ê² ë‹¤ëŠ” ëœ»
 	}
 }
 
@@ -21,7 +21,7 @@ int main() {
 
 	for (int i = 0; i < ROWS; i++) {
 		sum[i] = studentScore[i][0] * 0.3 + studentScore[i][1] * 0.4 + studentScore[i][2] * 0.2 + studentScore[i][3] * 0.1 - studentScore[i][4];
-		printf("ÇĞ»ı %dÀÇ ÃÖÁ¾ ¼ºÀûÀº : %10.2f\n", i+1, sum[i]); // %10.2f => ¼Ò¼öÁ¡À» ±âÁØÀ¸·Î ¾Õ µÚ, 2Ä­¾¿ Ãâ·Â
+		printf("ï¿½Ğ»ï¿½ %dï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : %10.2f\n", i+1, sum[i]); // %10.2f => ï¿½Ò¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½, 2Ä­ï¿½ï¿½ ï¿½ï¿½ï¿½
 	}
 	*/
 	interfaceScore(studentScore);

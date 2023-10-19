@@ -7,24 +7,24 @@ int main() {
 	int inputNumArr2[ROWS][COLS] = { 0 };
 	int crossNum[ROWS][COLS] = {0};
 
-	printf("1╧Ь ╧Х©╜юг ют╥б╟╙ю╩ ют╥бго╪╪©Д");
+	printf("Л╡╚К╡┬Л╖╦ К╟╟Л≈╢Л²≤ Л·┘К═╔ Й╟▓Л²└ Л┌╫Л·┘М∙≤Л└╦Л ■");
 	for (int i = 0; i < ROWS; i++) {
 		for (int j = 0; j < COLS; j++) {
-			scanf_s("%d", &inputNumArr[i][j]);
+			scanf("%d", &inputNumArr[i][j]);
 		}
 	}
 
-	printf("2╧Ь ╧Х©╜юг ют╥б╟╙ю╩ ют╥бго╪╪©Д");
+	printf("К▒░ К╡┬Л╖╦ К╟╟Л≈╢Л²≤ Л·┘К═╔ Й╟▓Л²└ Л┌╫Л·┘М∙≤Л└╦Л ■");
 	for (int i = 0; i < ROWS; i++) {
 		for (int j = 0; j < COLS; j++) {
 
-			scanf_s("%d", &inputNumArr2[i][j]);
+			scanf("%d", &inputNumArr2[i][j]);
 		}
 	}
 	for (int i = 0; i < ROWS; i++) {
 		for (int j = 0; j < COLS; j++) {
 			crossNum[i][j] = inputNumArr[i][j] * inputNumArr2[i][j];
-			printf("%3d ", crossNum[i][j]);
+			printf("%2d ", crossNum[i][j]);
 		}
 		printf("\n");
 	}

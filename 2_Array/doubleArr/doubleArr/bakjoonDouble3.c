@@ -18,6 +18,6 @@ int main() {
 		printf("\n");
 	}
 
-	printf("ÇÕ°è : %d", sum);
+	printf("í•©ê³„ : %d", sum);
 
 }

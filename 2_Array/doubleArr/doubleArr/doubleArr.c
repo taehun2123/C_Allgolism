@@ -11,8 +11,8 @@ int main() {
 	for (i = 0; i < ROWS; i++) {
 		for ( j = 0; j < COLS; j++)
 		{
-			randNum[i][j] = rand() % 100;
-			printf("% 2d", randNum[i][j]);
+			randNum[i][j] = rand() % 100; // 0~99까지 랜덤으로 입력됨
+			printf(" %2d", randNum[i][j]); //2자리 정수까지만 출력됨
 		}
 		printf("\n");
 	}
