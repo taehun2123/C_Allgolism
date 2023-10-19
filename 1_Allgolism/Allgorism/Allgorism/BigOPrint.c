@@ -7,6 +7,7 @@ bool isArrayZero(int arr[])
 }
 
 int main() {
+	//입력 data의 크기에 상관없이 항상 일정한 시간 소요
 	int arr[INDEX] = { 0 };
 	bool result;
 
@@ -16,6 +17,6 @@ int main() {
 
 	result = isArrayZero(arr);
 
-	printf("����� %s, arr[0] = %d", result == 1 ? "TRUE" : "FALSE", arr[0]);
+	printf("결과는 %s, arr[0] = %d", result == 1 ? "TRUE" : "FALSE", arr[0]);
 
 }

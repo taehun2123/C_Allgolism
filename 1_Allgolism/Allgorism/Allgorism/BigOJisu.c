@@ -5,15 +5,14 @@ int printFibonachi(int n) {
 	if (n <= 0) return 0;
 	else if (n == 1) return 1;
 	else return (printFibonachi(n - 1) + printFibonachi(n - 2));
-
 }
 
 
 int main() {
 	int n, i;
 
-	printf("ÇÇº¸³ªÄ¡ ¼ö¿­À» ±¸ÇÒ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À");
-	scanf_s("%d", &n);
+	printf("í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ì„ êµ¬í•  ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš” >>");
+	scanf("%d", &n);
 	for(int i = 0; i<n; i++){
 		printf("%d, ", printFibonachi(i));
 	}
