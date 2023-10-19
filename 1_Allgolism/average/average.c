@@ -5,19 +5,20 @@ int main(void) {
 
 	int score[STUDENTS] = { 0, };
 	int sum = 0;
-	int i, average;
+	int i;
+	double average;
 
 	for (i = 0; i < STUDENTS; i++) {
-		printf("%d¹øÂ° ÇÐ»ýÀÇ ¼ºÀûÀ» ÀÔ·ÂÇÏ¼¼¿ä : ", i + 1);
-		scanf_s("%d", &score[i]);
+		printf("%dë²ˆì§¸ í•™ìƒì˜ ì„±ì ì„ ìž…ë ¥í•˜ì„¸ìš” : ", i + 1);
+		scanf("%d", &score[i]);
 	}
 
 	for (i = 0; i < STUDENTS; i++) {
 		sum += score[i];
 	}
 
-	average = sum / STUDENTS;
-	printf("ÇÐ»ýµéÀÇ ¼ºÀû Æò±ÕÀº %dÀÔ´Ï´Ù.\n", average);
+	average = (double)sum / STUDENTS;
+	printf("í•™ìƒë“¤ì˜ ì „ì²´ í‰ê·  ì ìˆ˜ëŠ” %.2fì ìž…ë‹ˆë‹¤.\n", average);
 	
 
 }

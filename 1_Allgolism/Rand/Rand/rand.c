@@ -7,7 +7,7 @@ int main(void) {
 	int score[SIZE] = { 0 };
 
 	for (i = 0; i < SIZE; i++) {
-		score[i] = rand() % 100; //99±îÁö¸¸ ³ª¿È
+		score[i] = rand() % 100; //99ê¹Œì§€ì˜ ìˆ˜ ì¤‘ ëžœë¤ìœ¼ë¡œ ìž…ë ¥
 	}
 	for (i = 0; i < SIZE; i++) {
 		printf("score[%d]=%d\n", i, score[i]);

@@ -19,15 +19,15 @@ int main(void)
 
 
 	for (i = 0; i < MAX_ELEMENTS; i++) {
-		printf("%d ¹øÂ° Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä\n", i + 1);
+		printf("%d ë²ˆì§¸ í•™ìƒì˜ ì ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”\n", i + 1);
 		scanf_s("%d", &scores);
 		score[i] = scores;                       
 	}
 
 	for (i = 0; i < MAX_ELEMENTS; i++) {
-		printf("%d¹øÂ° Á¡¼ö´Â %d\n", i + 1, score[i]);
+		printf("%dë²ˆì§¸ í•™ìƒì˜ ì ìˆ˜ = %d\n", i + 1, score[i]);
 	}
 
-	printf("ÃÖ°í Á¡¼ö´Â %d ÀÔ´Ï´Ù.\n", get_max_score());
+	printf("í•™ìƒë“¤ ì¤‘ ê°€ìž¥ ë†’ì€ ì ìˆ˜ëŠ” %d ìž…ë‹ˆë‹¤.\n", get_max_score());
 
 }

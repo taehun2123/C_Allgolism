@@ -4,14 +4,14 @@
 int main(void) {
 	char typingInput;
 	char lang[MAX_LANG] = { 'J', 'U', 'N', 'G', 'O', 'L' };
-	scanf_s(" %c", &typingInput, 1); // Å©±â¸¦ ¸î °³ ¹Ş°Ú´Ù ¼±¾ğÇØÁà¾ßÇÔ
+	scanf(" %c", &typingInput); // í•œ ê¸€ì ì…ë ¥ë°›ê¸°
 
 
-	int found = 0; // ÀÏÄ¡ÇÏ´Â °ª È®ÀÎÇÏ´Â º¯¼ö
+	int found = 0; // ì°¾ìŒì„ í‘œì‹œí•˜ëŠ” ë³€ìˆ˜ found
 
 	for (int i = 0; i < MAX_LANG; i++) {
 		if (typingInput == lang[i]) {
-			printf("%d", i);
+			printf("ê¸€ìê°€ ìœ„ì¹˜í•œ ì¸ë±ìŠ¤ ê°’ì€ %dë²ˆ ì…ë‹ˆë‹¤.", i);
 			found = 1;
 			break;
 		}
