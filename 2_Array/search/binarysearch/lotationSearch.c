@@ -2,7 +2,7 @@
 #define SIZE 10
 int main(void)
 {
-	// 순차탐색(먼저 정렬되어 있어야 함)
+	// 순차탐색
 	int key, i;
 	int list[SIZE] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 	printf("찾을 수를 입력하세요");
