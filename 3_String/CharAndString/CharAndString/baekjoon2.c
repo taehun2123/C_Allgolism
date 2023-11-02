@@ -2,7 +2,6 @@
 #include <string.h>
 int main(){
   char str[100];
-
   scanf("%s", str);
 
   int length = strlen(str);
@@ -14,5 +13,5 @@ int main(){
     }
     str[0] = temp;
     printf("%s\n", str);
-  }
+
 }
