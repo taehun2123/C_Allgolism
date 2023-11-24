@@ -87,9 +87,9 @@ int squareHash(int number) {
 
 // 구조체 정의
 typedef struct {
+    // struct Node* hashTable[MAX_TABLE_LENGTH]; // 연결 리스트를 저장할 해시 테이블(체이닝 예시)
     char codes[MAX_TABLE_LENGTH][MAX_CODE_LENGTH]; // 암호화 이전 코드 저장
     char hashTable[MAX_TABLE_LENGTH][MAX_CODE_LENGTH]; // 최대 5개의 암호화된 코드 저장
-    int count;        // 현재 저장된 코드의 개수
 } EncryptedCodes;     // EncryptedCodes라는 구조체로 정의
 
 // 암호화 함수 정의
@@ -158,8 +158,32 @@ void encrypt(EncryptedCodes* encryptedCodes, char advancedCode[][MAX_ADVANCED_CO
     sprintf(encryptedCodes->hashTable[hashValue], "%d", prevHashValue); // 해싱된 값을 암호화 한 배열에 저장
     strcpy(encryptedCodes->codes[hashValue], inputCode); // 암호화 이전 코드를 복호화 목록에 저장
     printf("암호화 완료! 해싱된 코드: %d, 저장된 공간 %d번", prevHashValue, hashValue);
-    encryptedCodes->count++;
 }
+
+//     //충돌 처리 - 체이닝
+//      int index = hashValue % MAX_TABLE_LENGTH
+
+//     if (encryptedCodes->hashTable[index] == NULL) { // 해당 해시 값의 연결 리스트가 비어 있는 경우
+
+//         struct Node* newNode = (struct Node*)malloc(sizeof(struct Node)); //newNode는 동적배열 - 새 노드 생성
+//         newNode->value = hashValue; //노드 내부의 value 키에 hashValue 저장
+//         newNode->next = NULL; // 노드 내부의 next 키를 NULL로 만듬 - 중복이 일어났다면 다음 것은 next에 저장됨.
+//         encryptedCodes->hashTable[index] = newNode; //테이블의 hashValue가 가르키는 배열에 노드 저장
+//     } else { // 만약 테이블 배열 안이 NULL이 아니라면? - 중복
+//         // 해당 해시 값의 연결 리스트에 노드 추가
+//         struct Node* current = encryptedCodes->hashTable[index];
+//         while (current->next != NULL) { //next키가 NULL이 될 때까지
+//             current = current->next; // 계속 다음 키로 이동하여 비어있는 곳을 찾음
+//         }
+
+//         struct Node* newNode = (struct Node*)malloc(sizeof(struct Node)); // 동적배열 - 새 노드 생성
+//         newNode->value = hashValue; // value에 hashValue 삽입
+//         newNode->next = NULL; // next는 NULL
+//         current->next = newNode; 찾은 비어있는 키에 새로운 노드를 삽입함.
+//     }
+//
+//     printf("암호화 완료! 해싱된 코드: %d, 저장된 공간 %d번\n", hashValue, index(내부에 여러 개의 (노드)값들이 있을 수 있음));
+// }
 
 
 // 암호화된 배열 출력 함수
@@ -172,6 +196,12 @@ void printEncryptedArray(EncryptedCodes* encryptedCodes) {
     }
     printf("------------------------\n");
 }
+//      (for 아래에) struct Node* current = encryptedCodes->hashTable[i]; // 체이닝 기법이라면 이렇게 저장합니다.
+//      while (current != NULL) {
+//        printf("해시테이블 %d번에 저장된 암호화 코드: %s\n", current->value, encryptedCodes->codes[current->value]);
+//        current = current->next;
+//      }
+
 
 // 복호화 함수 출력
 void decrypt(EncryptedCodes* encryptedCodes) {
@@ -188,7 +218,6 @@ int main() {
     char advancedCode[MAX_ADVANCED_CODE][MAX_CODE_LENGTH]; // 최대 5개의 코드를 저장할 배열
     enterAdvancedCodes(advancedCode);
     EncryptedCodes encryptedCodes;
-    encryptedCodes.count = 0;
 
     while (1) {
         int choice = showMenu();
