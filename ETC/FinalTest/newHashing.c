@@ -85,7 +85,7 @@ int foldingHash(char *code) {
 //중간제곱 함수
 //제곱한 값에 %1000, %10한 값을 해쉬값으로 반환
 int squareHash(int number) {
-    return ((number * number)%1000)%10;
+    return (number * number)%100;
 }
 
 // 구조체 정의
