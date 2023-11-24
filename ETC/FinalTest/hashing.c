@@ -138,30 +138,18 @@ void encrypt(EncryptedCodes* encryptedCodes, char advancedCode[][MAX_ADVANCED_CO
                 break;
             }
 
-    // 충돌 처리
+    // 충돌 처리 - 선형 조사법
     int prevHashValue;
-    if (encryptedCodes->hashTable[hashValue % MAX_TABLE_LENGTH][0] != '\0') {
-        if (hashValue % 2 == 0) {
-            // 암호화 할 코드가 짝수인 경우 선형 조사법 - 충돌 발생 시 배열에서 다음 빈 슬롯을 찾아 해시 값을 조정함
-            int temp = hashValue;
-            int i = 1; // 선형 조사법에 사용될 간격을 나타내는 변수
-            int index = hashValue % MAX_TABLE_LENGTH; // hashValue를 테이블의 크기로 나눈 나머지를 취해 배열 내 위치 저장 결정
-            while (encryptedCodes->hashTable[index][0] != '\0') { // i%5의 위치가 비어 있는지 확인
-                index = (hashValue + i) % MAX_TABLE_LENGTH; // 비어있지 않다면? -> 충돌 발생, hashvalue에 i를 더하여 다음 위치 계산, 새로운 해시 값 얻을 수 있음
-                i++;
-            }
-            hashValue = index;
-            prevHashValue = temp;
-        } else {
-            // 홀수인 경우 체이닝
-            int temp = hashValue;
-            int index = hashValue % MAX_TABLE_LENGTH; // hashValue를 테이블의 크기로 나눈 나머지를 취해 배열 내 위치 저장 결정
-            while (encryptedCodes->hashTable[index][0] != '\0') { // 선택한 인덱스에 다른 코드가 존재하는지 확인
-                index += 1; // 충돌이 발생하면 다음 슬롯으로 이동하여 빈 슬롯을 찾기위해 인덱스를 증가시킴
-            }
-            hashValue = index;
-            prevHashValue = temp;
-        }
+	  if (encryptedCodes->hashTable[hashValue % MAX_TABLE_LENGTH][0] != '\0') { //충돌 발생 시만 해당 로직 처리
+	        int temp = hashValue;
+	        int i = 1; // 선형 조사법에 사용될 간격을 나타내는 변수
+	        int index = hashValue % MAX_TABLE_LENGTH; // hashValue를 테이블의 크기로 나눈 나머지를 취해 배열 내 위치 저장 결정
+	        while (encryptedCodes->hashTable[index][0] != '\0') { // 인덱스의 자리가 비어있는지 확인
+	            index = (hashValue + i) % MAX_TABLE_LENGTH; // 일정 간격(i) 떨어진 위치에 빈 공간이 나올 때 까지 찾음
+	            i++;
+	        }
+	        hashValue = index; //해시 테이블 내부 인덱스 값을 저장.
+	        prevHashValue = temp; //암호화 된 값을 저장
     } else {
         prevHashValue = hashValue;
         hashValue = hashValue % MAX_TABLE_LENGTH;
