@@ -86,6 +86,12 @@ int squareHash(int number) {
 }
 
 // 구조체 정의
+
+//struct Node {
+//    char code[MAX_CODE_LENGTH];  // 암호화 이전 코드 저장
+//    struct Node* next;           // 다음 노드를 가리키는 포인터
+//};
+
 typedef struct {
     // struct Node* hashTable[MAX_TABLE_LENGTH]; // 연결 리스트를 저장할 해시 테이블(체이닝 예시)
     char codes[MAX_TABLE_LENGTH][MAX_CODE_LENGTH]; // 암호화 이전 코드 저장
