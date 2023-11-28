@@ -44,7 +44,7 @@ void enterAdvancedCodes(char advancedCode[][MAX_CODE_LENGTH]) { //numCodes는 �
 void printAdvancedCodes(char advancedCode[][MAX_CODE_LENGTH]) {
     printf("\n--- 사전 코드 목록 ---\n");
     for (int i = 0; i < MAX_ADVANCED_CODE; i++) {
-        if (advancedCode[i] != 0) {
+        if (advancedCode[i] != '\0') {
             printf("%d번 사전코드: %s\n", i + 1, advancedCode[i]);
         }
     }
@@ -60,6 +60,7 @@ int additiveHash(char key[]) {
     }
     return hash;
 }
+
 //폴딩 해시함수
 /* 코드의 길이를 자릿수만큼 나누어,
      다시 합산한 후 반환하는 함수*/
@@ -88,7 +89,7 @@ int squareHash(int number) {
 // 구조체 정의
 
 //struct Node {
-//    char code[MAX_CODE_LENGTH];  // 암호화 이전 코드 저장
+//    char value[MAX_CODE_LENGTH];  // 암호화 이전 코드 저장
 //    struct Node* next;           // 다음 노드를 가리키는 포인터
 //};
 
