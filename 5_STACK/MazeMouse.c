@@ -77,8 +77,7 @@ element peek(StackType *s){
 
 
 int push_loc(StackType *s, int r, int c) {
-    if(r < 0 || c < 0);
-    if(maze[r][c] != '1' && maze[r][c] != '.'){
+    if((r > 0 || c > 0) && maze[r][c] != '1' && maze[r][c] != '.'){
       element tmp;
       tmp.r = r;
       tmp.c = c;
