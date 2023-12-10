@@ -71,8 +71,8 @@ int foldingHash(char *code) {
 
   for (int i = 0; i < len; i += step) {
       int segment = 0;
-      for (int j = 0; j < step && (i + j) < len; j++) {
-          segment = segment * 10 + code[i + j] - '0';
+      for (int j = 0; j < step && (i + j) < len; j++) { // i+j가 코드의 길이를 초과하지않도록
+          segment = segment * 10 + code[i + j] - '0'; //문자열을 code를 숫자로 변환하기 위한 '0' 빼기
       }
       hash += segment;
   }
